@@ -20,7 +20,6 @@ sys.path.append('./src/fns_helios_simplified.py')
 sys.path.append('./src/net_cfg.json')
 sys.path.append('./src/cls.py')
 
-_path_cache = {}
 
 
 def get_sparse_matrix_paths_cached(signal_dir, background_dir):
@@ -34,6 +33,9 @@ def get_sparse_matrix_paths_cached(signal_dir, background_dir):
     :return: A list of paths to sparse matrices in the given signal and background directories
 
     """
+
+    _path_cache = {}
+    
     if signal_dir not in _path_cache:
         signal_paths = [entry.path for entry in sorted(os.scandir(signal_dir), key=lambda x: x.name) if entry.is_file()]
         _path_cache[signal_dir] = signal_paths
