@@ -28,3 +28,6 @@ Worth noting is the image-preprocessing files: those are `sparsify_csv.py`, `ROI
 - `find2lines.py` is a constrained flood fill routine for the detection of the *double-track* instances.
 
 When it comes to documentation, most of the code is supplemented with comments, and the functions are ensured to have the *docstrings*. In the future, I plan to create more extensive documentation and, of course, refine the existing code.
+
+With regards,
+Anna
